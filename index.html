@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Amanhã das Cidades - Hackathon</title>
+    <meta name="description" content="Participe do hackathon 'O Amanhã das Cidades' e ajude a criar soluções para as cidades do século XXII">
+    <meta name="keywords" content="hackathon, cidades, futuro, sustentabilidade, inovação, tecnologia">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header e Navegação -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">O Amanhã das Cidades</a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#temas" class="nav-link">Temas</a></li>
+                    <li class="nav-item"><a href="#formato" class="nav-link">Formato</a></li>
+                    <li class="nav-item"><a href="#premiacao" class="nav-link">Premiação</a></li>
+                    <li class="nav-item"><a href="#inscricao" class="nav-link">Inscrição</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>O Amanhã das Cidades</h1>
+            <h2>Desafios e Soluções para o Século XXII</h2>
+            <p>Imagine uma cidade no ano de 2100. Como será viver nela? Que problemas enfrentaremos? E, mais importante: como podemos começar a resolvê-los agora?</p>
+            <div class="countdown-container">
+                <h3>Evento em breve!</h3>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <p>Dias</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <p>Horas</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <p>Minutos</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <p>Segundos</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#inscricao" class="cta-button">Inscreva-se Agora</a>
+        </div>
+    </section>
+
+    <!-- Sobre o Evento -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre o Hackathon</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>O hackathon "O Amanhã das Cidades" convida você a explorar as transformações que os centros urbanos enfrentarão até o século XXII. A missão é clara: propor soluções <strong>criativas, viáveis e impactantes para construir cidades mais humanas, inteligentes, sustentáveis e inclusivas.</strong></p>
+                    <p>Este é um desafio para pessoas apaixonadas por inovação, tecnologia, urbanismo, sustentabilidade e impacto social. É uma oportunidade para você sair do presente e <strong>projetar o futuro.</strong></p>
+                </div>
+                <div class="sobre-image">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Cidade futurista">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temas e Desafios -->
+    <section id="temas" class="section temas-section">
+        <div class="container">
+            <h2 class="section-title">Temas e Desafios</h2>
+            <p class="section-subtitle">Escolha um dos eixos temáticos abaixo como base para sua solução:</p>
+            
+            <div class="temas-grid">
+                <!-- Tema 1 -->
+                <div class="tema-card" data-tema="clima">
+                    <div class="tema-icon">
+                        <i class="fas fa-cloud-sun-rain"></i>
+                    </div>
+                    <h3>Mudanças Climáticas</h3>
+                    <p>Como tornar as cidades resilientes aos eventos climáticos extremos?</p>
+                    <a href="tema-clima.html" class="tema-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Tema 2 -->
+                <div class="tema-card" data-tema="populacao">
+                    <div class="tema-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>População Envelhecida</h3>
+                    <p>Como adaptar as cidades a uma população cada vez mais idosa?</p>
+                    <a href="tema-populacao.html" class="tema-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Tema 3 -->
+                <div class="tema-card" data-tema="mobilidade">
+                    <div class="tema-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Mobilidade Urbana</h3>
+                    <p>Como mover milhões de pessoas de forma eficiente, limpa e acessível?</p>
+                    <a href="tema-mobilidade.html" class="tema-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Tema 4 -->
+                <div class="tema-card" data-tema="sustentabilidade">
+                    <div class="tema-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustentabilidade e Consumo Responsável</h3>
+                    <p>Como reduzir o impacto ambiental das cidades?</p>
+                    <a href="tema-sustentabilidade.html" class="tema-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Tema 5 -->
+                <div class="tema-card" data-tema="desigualdade">
+                    <div class="tema-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Desigualdade e Inclusão Social</h3>
+                    <p>Como garantir que o futuro urbano seja para todos?</p>
+                    <a href="tema-desigualdade.html" class="tema-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formato do Hackathon -->
+    <section id="formato" class="section formato-section">
+        <div class="container">
+            <h2 class="section-title">Formato do Hackathon</h2>
+            
+            <div class="formato-grid">
+                <div class="formato-item">
+                    <div class="formato-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Duração</h3>
+                    <p>48 horas de imersão total</p>
+                </div>
+                
+                <div class="formato-item">
+                    <div class="formato-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Equipes</h3>
+                    <p>4 a 6 participantes com perfis diversos</p>
+                </div>
+                
+                <div class="formato-item">
+                    <div class="formato-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Entrega Final</h3>
+                    <p>Apresentação de uma solução inovadora</p>
+                </div>
+                
+                <div class="formato-item">
+                    <div class="formato-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Mentorias</h3>
+                    <p>Especialistas disponíveis para orientação</p>
+                </div>
+            </div>
+            
+            <div class="avaliacao">
+                <h3>Avaliação</h3>
+                <p>As soluções serão avaliadas por um júri com base em:</p>
+                <div class="criterios-grid">
+                    <div class="criterio">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Inovação</h4>
+                    </div>
+                    <div class="criterio">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Viabilidade</h4>
+                    </div>
+                    <div class="criterio">
+                        <i class="fas fa-globe-americas"></i>
+                        <h4>Impacto Social/Ambiental</h4>
+                    </div>
+                    <div class="criterio">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Clareza na Apresentação</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premiação -->
+    <section id="premiacao" class="section premiacao-section">
+        <div class="container">
+            <h2 class="section-title">Premiação</h2>
+            <p class="section-subtitle">As melhores propostas receberão prêmios em diferentes categorias</p>
+            
+            <div class="premios-grid">
+                <div class="premio-card">
+                    <div class="premio-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Solução Mais Inovadora</h3>
+                    <p>Reconhecimento para a ideia mais criativa e disruptiva</p>
+                </div>
+                
+                <div class="premio-card">
+                    <div class="premio-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Maior Potencial de Impacto</h3>
+                    <p>Para a solução com maior capacidade de transformação</p>
+                </div>
+                
+                <div class="premio-card">
+                    <div class="premio-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Viabilidade Técnica</h3>
+                    <p>Para a proposta mais realista e implementável</p>
+                </div>
+                
+                <div class="premio-card">
+                    <div class="premio-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Melhor Pitch</h3>
+                    <p>Para a equipe com a apresentação mais convincente</p>
+                </div>
+            </div>
+            
+            <div class="premio-detalhes">
+                <h3>Detalhes dos Prêmios</h3>
+                <p>Os vencedores receberão:</p>
+                <ul>
+                    <li>Certificação e reconhecimento público</li>
+                    <li>Mentorias especializadas para desenvolver a ideia</li>
+                    <li>Oportunidade de apresentação para investidores</li>
+                    <li>Incubação da solução em parceria com instituições</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inscrição -->
+    <section id="inscricao" class="section inscricao-section">
+        <div class="container">
+            <h2 class="section-title">Participe do Hackathon</h2>
+            <div class="inscricao-content">
+                <div class="inscricao-info">
+                    <h3>Quem pode participar?</h3>
+                    <p>Estudantes, profissionais, empreendedores, pesquisadores, desenvolvedores, designers, urbanistas, engenheiros, cientistas sociais e qualquer pessoa interessada em criar soluções para um futuro urbano mais justo, verde e inteligente.</p>
+                    
+                    <h3>Por que participar?</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Contribua com ideias para transformar o mundo real</li>
+                        <li><i class="fas fa-check"></i> Conecte-se com pessoas incríveis e mentores experientes</li>
+                        <li><i class="fas fa-check"></i> Coloque seu conhecimento em prática em um desafio real</li>
+                        <li><i class="fas fa-check"></i> Ganhe visibilidade e a chance de tirar sua ideia do papel</li>
+                    </ul>
+                </div>
+                
+            <div class="inscricao-form">
+    <h3>Inscreva-se Agora</h3>
+    <div class="google-form-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8txKvI2c54nkpuOc7a-6E4qRqz-Dl7jGagqMT5r_C90OK0Q/viewform?embedded=true" 
+                width="100%" 
+                height="600" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0"
+                style="border-radius: 8px;">
+            Carregando formulário de inscrição...
+        </iframe>
+    </div>
+    <div class="form-alternative">
+        <p>Prefere abrir em uma nova aba? <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8txKvI2c54nkpuOc7a-6E4qRqz-Dl7jGagqMT5r_C90OK0Q/viewform?usp=header" target="_blank">Clique aqui</a></p>
+    </div>
+</div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>O Amanhã das Cidades</h3>
+                    <p>Hackathon para projetar soluções para as cidades do século XXII</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#temas">Temas</a></li>
+                        <li><a href="#formato">Formato</a></li>
+                        <li><a href="#premiacao">Premiação</a></li>
+                        <li><a href="#inscricao">Inscrição</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> contato@amanhadasciudades.com</p>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 O Amanhã das Cidades. Todos os direitos reservados.</p>
+                <p>O futuro não se prevê. Ele se constrói.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
