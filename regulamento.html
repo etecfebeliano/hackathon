@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulamento - O Amanhã das Cidades</title>
+    <meta name="description" content="Regulamento completo do hackathon O Amanhã das Cidades">
+    <meta name="keywords" content="regulamento, hackathon, regras, cidades, futuro">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para a página do regulamento */
+        .breadcrumb {
+            padding: 1rem 0;
+            background-color: #f0f4f8;
+            margin-top: 70px;
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            list-style: none;
+        }
+
+        .breadcrumb li {
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb li:not(:last-child):after {
+            content: ">";
+            margin-left: 0.5rem;
+            color: var(--gray-color);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .regulamento-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .regulamento-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .regulamento-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pdf-container {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .pdf-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+        }
+
+        .pdf-header h2 {
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .pdf-viewer {
+            padding: 0;
+        }
+
+        .pdf-viewer iframe {
+            border: none;
+            display: block;
+        }
+
+        .pdf-actions {
+            padding: 1.5rem;
+            text-align: center;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-color);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .file-info i {
+            margin-right: 0.5rem;
+            color: #e74c3c;
+        }
+
+        @media (max-width: 768px) {
+            .regulamento-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .pdf-viewer iframe {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header e Navegação -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">O Amanhã das Cidades</a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="index.html#temas" class="nav-link">Temas</a></li>
+                    <li class="nav-item"><a href="index.html#formato" class="nav-link">Formato</a></li>
+                    <li class="nav-item"><a href="index.html#premiacao" class="nav-link">Premiação</a></li>
+                    <li class="nav-item"><a href="index.html#inscricao" class="nav-link">Inscrição</a></li>
+                    <li class="nav-item"><a href="regulamento.html" class="nav-link">Regulamento</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li>Regulamento</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="regulamento-hero">
+        <div class="container">
+            <h1>Regulamento do Hackathon</h1>
+            <p>Conheça todas as regras e diretrizes do evento</p>
+        </div>
+    </section>
+
+    <!-- Regulamento Section -->
+    <section class="section">
+        <div class="container">
+            <div class="pdf-container">
+                <div class="pdf-header">
+                    <h2>Regulamento Completo</h2>
+                    <p>Hackathon "O Amanhã das Cidades"</p>
+                </div>
+                
+                <div class="file-info">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>regulamento-hackathon.pdf • Última atualização: 15/05/2024</span>
+                </div>
+
+                <div class="pdf-viewer">
+                    <iframe src="assets/docs/regulamento-hackathon.pdf" 
+                            width="100%" 
+                            height="700"
+                            style="border: none;">
+                        <p>Seu navegador não suporta visualização de PDF. 
+                           <a href="assets/docs/regulamento-hackathon.pdf" download>Baixe o regulamento</a>
+                        </p>
+                    </iframe>
+                </div>
+                
+                <div class="pdf-actions">
+                    <a href="assets/docs/regulamento-hackathon.pdf" download class="cta-button">
+                        <i class="fas fa-download"></i> Baixar PDF
+                    </a>
+                    <p style="margin-top: 1rem; color: var(--gray-color); font-size: 0.9rem;">
+                        Tamanho do arquivo: ~2MB • Formato: PDF
+                    </p>
+                </div>
+            </div>
+
+            <!-- Informações Adicionais -->
+            <div class="premio-detalhes" style="margin-top: 3rem;">
+                <h3>Dúvidas sobre o regulamento?</h3>
+                <p>Entre em contato conosco para esclarecer qualquer questão:</p>
+                <ul>
+                    <li><strong>Email:</strong> contato@amanhadasciudades.com</li>
+                    <li><strong>WhatsApp:</strong> <a href="https://chat.whatsapp.com/BqZNRmiwfXb3Q85tv6c5mN" target="_blank">Grupo de Dúvidas</a></li>
+                    <li><strong>Telefone:</strong> (11) 99999-9999</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>O Amanhã das Cidades</h3>
+                    <p>Hackathon para projetar soluções para as cidades do século XXII</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#temas">Temas</a></li>
+                        <li><a href="index.html#formato">Formato</a></li>
+                        <li><a href="index.html#premiacao">Premiação</a></li>
+                        <li><a href="index.html#inscricao">Inscrição</a></li>
+                        <li><a href="regulamento.html">Regulamento</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> contato@amanhadasciudades.com</p>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 O Amanhã das Cidades. Todos os direitos reservados.</p>
+                <p>O futuro não se prevê. Ele se constrói.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

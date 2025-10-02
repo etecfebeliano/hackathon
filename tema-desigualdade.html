@@ -3,587 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desigualdade e Inclusão Social - O Amanhã das Cidades</title>
-    <meta name="description" content="Desafio: Como garantir que o futuro urbano seja para todos? Proponha soluções para habitação acessível, inclusão digital e redução da segregação urbana.">
-    <meta name="keywords" content="desigualdade social, inclusão social, habitação acessível, inclusão digital, segregação urbana, equidade urbana, justiça social, acesso a serviços, redução de desigualdades, cidades inclusivas, diversidade urbana, políticas públicas inclusivas, hackathon, cidades do futuro">
+    <title>Mudanças Climáticas - O Amanhã das Cidades</title>
+    <meta name="description" content="Desafio: Como tornar as cidades resilientes aos eventos climáticos extremos? Participe do hackathon O Amanhã das Cidades.">
+    <meta name="keywords" content="mudanças climáticas, cidades resilientes, eventos climáticos extremos, hackathon, sustentabilidade">
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        /* Reset e configurações básicas */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* Específico para páginas de temas */
+    
+    /* Breadcrumb (não existe no styles.css principal) */
+    .breadcrumb {
+        padding: 1rem 0;
+        background-color: #f0f4f8;
+        margin-top: 70px;
+    }
 
-        :root {
-            --primary-color: #2a5bd7;
-            --secondary-color: #1a3a8f;
-            --accent-color: #4cd964;
-            --dark-color: #1e1e2d;
-            --light-color: #f8f9fa;
-            --gray-color: #6c757d;
-            --text-color: #333;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
+    .breadcrumb ol {
+        display: flex;
+        list-style: none;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-color);
-            scroll-behavior: smooth;
-        }
+    .breadcrumb li {
+        margin-right: 0.5rem;
+        font-size: 0.9rem;
+    }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--dark-color);
-        }
+    .breadcrumb li:not(:last-child):after {
+        content: ">";
+        margin-left: 0.5rem;
+        color: var(--gray-color);
+    }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    .breadcrumb a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
 
-        .section {
-            padding: 80px 0;
-        }
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
 
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
+    /* Hero específico para temas */
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                    url('https://images.unsplash.com/photo-1569163139394-de44cb2c8cb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 100px 20px;
+    }
 
-        .section-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            text-align: center;
-            color: var(--gray-color);
-        }
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: white;
+    }
 
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 30px;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-        }
+    .hero-content p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+    }
 
-        .cta-button:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
+    .video-container {
+        max-width: 800px;
+        margin: 3rem auto 0;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--box-shadow);
+    }
 
-        /* Header e Navegação */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            transition: var(--transition);
-        }
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+    }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 20px;
-        }
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
 
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
+    /* Descrição Detalhada (específica para temas) */
+    .descricao-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+    }
 
-        .nav-menu {
-            display: flex;
-            list-style: none;
-        }
+    .contexto {
+        margin-bottom: 3rem;
+    }
 
-        .nav-item {
-            margin-left: 2rem;
-        }
+    .contexto p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
 
-        .nav-link {
-            color: var(--dark-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
+    .objetivos {
+        background-color: #f0f4f8;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        margin-bottom: 2rem;
+    }
 
-        .nav-link:hover {
-            color: var(--primary-color);
-        }
+    .objetivos h3 {
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+    }
 
-        /* Breadcrumb */
-        .breadcrumb {
-            padding: 1rem 0;
-            background-color: #f0f4f8;
-            margin-top: 70px;
-        }
+    .objetivos ul {
+        list-style: none;
+    }
 
-        .breadcrumb ol {
-            display: flex;
-            list-style: none;
-        }
+    .objetivos li {
+        padding: 0.5rem 0;
+        position: relative;
+        padding-left: 1.5rem;
+    }
 
-        .breadcrumb li {
-            margin-right: 0.5rem;
-            font-size: 0.9rem;
-        }
+    .objetivos li:before {
+        content: "✓";
+        color: var(--accent-color);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
 
-        .breadcrumb li:not(:last-child):after {
-            content: ">";
-            margin-left: 0.5rem;
-            color: var(--gray-color);
-        }
+    .sidebar {
+        background-color: white;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        height: fit-content;
+        position: sticky;
+        top: 100px;
+    }
 
-        .breadcrumb a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
+    .info-card {
+        margin-bottom: 2rem;
+    }
 
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
+    .info-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+        border-bottom: 2px solid #f0f4f8;
+        padding-bottom: 0.5rem;
+    }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1569163139394-de44cb2c8cb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
+    .info-card ul {
+        list-style: none;
+    }
 
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: white;
-        }
+    .info-card li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #f0f4f8;
+    }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
+    .info-card li:last-child {
+        border-bottom: none;
+    }
 
-        .video-container {
-            max-width: 800px;
-            margin: 3rem auto 0;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-        }
+    /* Call-to-Action específico */
+    .cta-section {
+        text-align: center;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+    }
 
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-        }
+    .cta-section .section-title {
+        color: white;
+    }
 
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+    .cta-button.outline {
+        background-color: transparent;
+        border: 2px solid white;
+    }
 
-        /* Descrição Detalhada */
+    .cta-button.outline:hover {
+        background-color: white;
+        color: var(--primary-color);
+    }
+
+    .social-share {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .social-share a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    .social-share a:hover {
+        background-color: white;
+        color: var(--primary-color);
+        transform: translateY(-3px);
+    }
+
+    /* Responsividade específica para temas */
+    @media (max-width: 992px) {
         .descricao-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1fr;
         }
-
-        .contexto {
-            margin-bottom: 3rem;
-        }
-
-        .contexto p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .objetivos {
-            background-color: #f0f4f8;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 2rem;
-        }
-
-        .objetivos h3 {
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .objetivos ul {
-            list-style: none;
-        }
-
-        .objetivos li {
-            padding: 0.5rem 0;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .objetivos li:before {
-            content: "✓";
-            color: var(--accent-color);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
+        
         .sidebar {
-            background-color: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            height: fit-content;
-            position: sticky;
-            top: 100px;
+            position: static;
         }
-
-        .info-card {
-            margin-bottom: 2rem;
-        }
-
-        .info-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-            border-bottom: 2px solid #f0f4f8;
-            padding-bottom: 0.5rem;
-        }
-
-        .info-card ul {
-            list-style: none;
-        }
-
-        .info-card li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #f0f4f8;
-        }
-
-        .info-card li:last-child {
-            border-bottom: none;
-        }
-
-        /* Materiais de Apoio */
-        .materiais-section {
-            background-color: #f0f4f8;
-        }
-
-        .categorias-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .tab {
-            padding: 0.75rem 1.5rem;
-            background-color: white;
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-            transition: var(--transition);
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
-            margin: 0 0.25rem;
-        }
-
-        .tab.active {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        .tab:hover:not(.active) {
-            background-color: #e9ecef;
-        }
-
-        .materiais-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .material-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .material-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .material-card.hidden {
-            display: none;
-        }
-
-        .material-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .material-icon {
-            height: 120px;
-            background-color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+        
+        .hero-content h1 {
             font-size: 2.5rem;
         }
+    }
 
-        .material-content {
-            padding: 1.5rem;
-        }
-
-        .material-content h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .material-content p {
-            margin-bottom: 1rem;
-            color: var(--gray-color);
-            font-size: 0.9rem;
-        }
-
-        .material-link {
-            display: inline-flex;
+    @media (max-width: 768px) {
+        .categorias-tabs {
+            flex-direction: column;
             align-items: center;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
         }
+        
+        .tab {
+            width: 100%;
+            max-width: 300px;
+            margin: 0.25rem 0;
+            border-radius: var(--border-radius);
+        }
+    }
 
-        .material-link i {
-            margin-left: 0.5rem;
-            transition: var(--transition);
+    @media (max-width: 576px) {
+        .hero {
+            padding: 80px 20px;
         }
-
-        .material-link:hover i {
-            transform: translateX(5px);
+        
+        .hero-content h1 {
+            font-size: 2rem;
         }
-
-        /* Call-to-Action */
-        .cta-section {
-            text-align: center;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-        }
-
-        .cta-section .section-title {
-            color: white;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .cta-button.outline {
-            background-color: transparent;
-            border: 2px solid white;
-        }
-
-        .cta-button.outline:hover {
-            background-color: white;
-            color: var(--primary-color);
-        }
-
-        .social-share {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-share a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .social-share a:hover {
-            background-color: white;
-            color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: white;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: #ccc;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-bottom p {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Responsividade */
-        @media (max-width: 992px) {
-            .descricao-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .sidebar {
-                position: static;
-            }
-            
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .categorias-tabs {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .tab {
-                width: 100%;
-                max-width: 300px;
-                margin: 0.25rem 0;
-                border-radius: var(--border-radius);
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .cta-button {
-                width: 100%;
-                max-width: 300px;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero {
-                padding: 80px 20px;
-            }
-            
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            
-            .materiais-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    }
+</style>
+    
 </head>
 <body>
     <!-- Header e Navegação -->
@@ -597,6 +274,7 @@
                     <li class="nav-item"><a href="index.html#formato" class="nav-link">Formato</a></li>
                     <li class="nav-item"><a href="index.html#premiacao" class="nav-link">Premiação</a></li>
                     <li class="nav-item"><a href="index.html#inscricao" class="nav-link">Inscrição</a></li>
+                    <li class="nav-item"><a href="regulamento.html" class="nav-link">Regulamento</a></li>
                 </ul>
             </div>
         </nav>
@@ -680,142 +358,179 @@
                         <li>Mecanismos de avaliação de impacto social</li>
                     </ul>
                 </div>
+
+                <div class="info-card">
+                        <h3>Datas Importantes</h3>
+                        <ul>
+                            <li>Inscrições: até 14 de novembro</li>
+                            <li>Hackathon: 24 de novembro</li>
+                            <li>Apresentação: 25 de novembro</li>
+                            <li>Apresentação finalistas: 27 de novembro</li>
+                            <li>Anúncio dos vencedores: 28 de novembro</li>
+                        </ul>
+                </div>
+                
             </div>
         </div>
     </div>
 </section>
 
     <!-- Materiais de Apoio -->
-    <section class="section materiais-section">
-        <div class="container">
-            <h2 class="section-title">Materiais de Apoio</h2>
-            <p class="section-subtitle">Recursos selecionados para inspirar e fundamentar sua solução</p>
-            
-            <div class="categorias-tabs">
-                <button class="tab active" data-categoria="artigos">Artigos Técnicos</button>
-                <button class="tab" data-categoria="noticias">Notícias</button>
-                <button class="tab" data-categoria="ferramentas">Ferramentas</button>
-                <button class="tab" data-categoria="cases">Cases de Sucesso</button>
-                <button class="tab" data-categoria="todos">Ver Todos</button>
+<section class="section materiais-section">
+    <div class="container">
+        <h2 class="section-title">Materiais de Apoio</h2>
+        <p class="section-subtitle">Recursos selecionados para inspirar e fundamentar sua solução</p>
+        
+        <div class="categorias-tabs">
+            <button class="tab active" data-categoria="artigos">Artigos Técnicos</button>
+            <button class="tab" data-categoria="ferramentas">Ferramentas</button>
+            <button class="tab" data-categoria="cases">Cases de Sucesso</button>
+            <button class="tab" data-categoria="todos">Ver Todos</button>
+        </div>
+        
+        <div class="materiais-grid" id="materiais-container">
+            <!-- Artigos Técnicos -->
+            <div class="material-card visible" data-categoria="artigos">
+                <div class="material-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="material-content">
+                    <h3>Designing for Climate Adaptation</h3>
+                    <p>Estudo de caso integrando soluções baseadas na natureza à infraestrutura urbana.</p>
+                    <a href="https://www.mdpi.com/2413-8851/9/3/74" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
+                </div>
             </div>
             
-            <div class="materiais-grid" id="materiais-container">
-                <!-- Artigos Técnicos -->
-                <div class="material-card visible" data-categoria="artigos">
-                    <div class="material-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Resiliência Urbana às Mudanças Climáticas</h3>
-                        <p>Documento técnico da ONU sobre estratégias de adaptação climática para cidades.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+            <div class="material-card visible" data-categoria="artigos">
+                <div class="material-icon">
+                    <i class="fas fa-water"></i>
                 </div>
-                
-                <div class="material-card visible" data-categoria="artigos">
-                    <div class="material-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Planejamento de Infraestrutura Verde</h3>
-                        <p>Guia completo para integração de soluções baseadas na natureza no ambiente urbano.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+                <div class="material-content">
+                    <h3>City Water Resilience Framework</h3>
+                    <p>Ferramenta de governança para fortalecer a resiliência hídrica urbana.</p>
+                    <a href="https://www.sciencedirect.com/science/article/pii/S2210670721007630?" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                
-                <div class="material-card visible" data-categoria="artigos">
-                    <div class="material-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Dados Climáticos para Cidades</h3>
-                        <p>Análise de séries históricas e projeções climáticas para planejamento urbano.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+            </div>
+            
+            <div class="material-card visible" data-categoria="artigos">
+                <div class="material-icon">
+                    <i class="fas fa-seedling"></i>
                 </div>
-                
-                <!-- Notícias -->
-                <div class="material-card hidden" data-categoria="noticias">
-                    <div class="material-icon">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Cidades Pioneiras em Resiliência Climática</h3>
-                        <p>Reportagem sobre as estratégias adotadas por cidades ao redor do mundo.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+                <div class="material-content">
+                    <h3>Infraestrutura Verde</h3>
+                    <p>Sustentabilidade e resiliência para a paisagem urbana.</p>
+                    <a href="https://revistas.usp.br/revistalabverde/article/view/61281?" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                
-                <div class="material-card hidden" data-categoria="noticias">
-                    <div class="material-icon">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Impacto Econômico das Mudanças Climáticas</h3>
-                        <p>Análise dos custos associados à inação frente aos eventos climáticos extremos.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+            </div>
+            
+            <div class="material-card visible" data-categoria="artigos">
+                <div class="material-icon">
+                    <i class="fas fa-city"></i>
                 </div>
-                
-                <!-- Ferramentas -->
-                <div class="material-card hidden" data-categoria="ferramentas">
-                    <div class="material-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Simulador de Impacto Climático</h3>
-                        <p>Ferramenta interativa para visualizar efeitos de diferentes cenários climáticos.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+                <div class="material-content">
+                    <h3>Mudanças Climáticas no Brasil</h3>
+                    <p>Desafios e estratégias de adaptação nas cidades brasileiras.</p>
+                    <a href="https://repositorio.ipea.gov.br/server/api/core/bitstreams/54eea093-bb85-46fb-81a8-905a37aa94a9/content" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                
-                <div class="material-card hidden" data-categoria="ferramentas">
-                    <div class="material-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Banco de Dados de Soluções Urbanas</h3>
-                        <p>Repositório de iniciativas bem-sucedidas de adaptação climática em cidades.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+            </div>
+            
+            <div class="material-card visible" data-categoria="artigos">
+                <div class="material-icon">
+                    <i class="fas fa-leaf"></i>
                 </div>
-                
-                <!-- Cases -->
-                <div class="material-card hidden" data-categoria="cases">
-                    <div class="material-icon">
-                        <i class="fas fa-city"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Roterdã: Modelo de Cidade Esponja</h3>
-                        <p>Case da cidade holandesa que transformou sua relação com a água.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+                <div class="material-content">
+                    <h3>Programa Cidades Verdes</h3>
+                    <p>Iniciativa governamental para cidades resilientes e sustentáveis.</p>
+                    <a href="https://www.gov.br/mma/pt-br/assuntos/meio-ambiente-urbano-recursos-hidricos-qualidade-ambiental/cidades-verdes-resilientes?utm_source=chatgpt.com" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                
-                <div class="material-card hidden" data-categoria="cases">
-                    <div class="material-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Cingapura: Jardim na Cidade</h3>
-                        <p>Como Cingapura integrou natureza e infraestrutura urbana para mitigar ilhas de calor.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+            </div>
+            
+            <div class="material-card visible" data-categoria="artigos">
+                <div class="material-icon">
+                    <i class="fas fa-water"></i>
+                </div>
+                <div class="material-content">
+                    <h3>Cidades Azuis</h3>
+                    <p>Soluções baseadas na natureza para resiliência climática costeira.</p>
+                    <a href="https://maredeciencia.eco.br/wp-content/uploads/2024/11/Ebook-Cidades-Azuis-Solucoes-Baseadas-na-Natureza-para-a-Resiliencia-Climatica-Costeira.pdf?" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            
+            <!-- Ferramentas -->
+            <div class="material-card hidden" data-categoria="ferramentas">
+                <div class="material-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="material-content">
+                    <h3>City Water Resilience Approach</h3>
+                    <p>Abordagem prática em 5 passos para construir resiliência hídrica nas cidades.</p>
+                    <a href="https://www.c40knowledgehub.org/s/article/The-city-water-resilience-approach?language=en_US&" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            
+            <div class="material-card hidden" data-categoria="ferramentas">
+                <div class="material-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="material-content">
+                    <h3>Case Study Atlas (UCCRN)</h3>
+                    <p>Banco de estudos de caso de adaptação climática urbana em diferentes contextos.</p>
+                    <a href="https://uccrn.ei.columbia.edu/news/case-study-atlas-urban-climate-change-research-network-project-parallel-ipcc-special-report?" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            
+            <div class="material-card hidden" data-categoria="ferramentas">
+                <div class="material-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="material-content">
+                    <h3>Case Study Explorer (EEA)</h3>
+                    <p>Repositório europeu de estudos de caso filtráveis por impacto, escala e tipo de adaptação.</p>
+                    <a href="https://climate-adapt.eea.europa.eu/en/knowledge/tools/case-study-explorer?" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            
+            <!-- Cases -->
+            <div class="material-card hidden" data-categoria="cases">
+                <div class="material-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="material-content">
+                    <h3>The Oasis Project</h3>
+                    <p>Estratégias de mitigação de ilhas de calor aplicadas em pátios escolares de Paris.</p>
+                    <a href="https://arxiv.org/abs/2408.08886?" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            
+            <div class="material-card hidden" data-categoria="cases">
+                <div class="material-icon">
+                    <i class="fas fa-route"></i>
+                </div>
+                <div class="material-content">
+                    <h3>Climate Adaptation com IA</h3>
+                    <p>Uso de Reinforcement Learning em cenários de enchentes e transporte em Copenhague.</p>
+                    <a href="https://arxiv.org/abs/2409.18574?" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Call-to-Action -->
+     <!-- Call-to-Action -->
     <section class="section cta-section">
         <div class="container">
             <h2 class="section-title">Participe Deste Desafio</h2>
-            <p>Junte-se a outros inovadores e garanta que o desenvolvimento urbano beneficie igualmente todos os cidadãos.</p>
-            
-            <div class="cta-buttons">
-                <a href="index.html#inscricao" class="cta-button">Inscrever-se no Hackathon</a>
-                <a href="#" class="cta-button outline">Tirar Dúvidas</a>
-            </div>
+            <p>Junte-se a outros inovadores e contribua para criar cidades mais resilientes às mudanças climáticas.</p>
+
+    <!-- Dúvidas -->            
+    <div class="cta-buttons">
+        <a href="index.html#inscricao" class="cta-button">Inscrever-se</a>
+        <a href="https://chat.whatsapp.com/BqZNRmiwfXb3Q85tv6c5mN" 
+           class="cta-button community-button" 
+           target="_blank">
+           <i class="fab fa-whatsapp"></i> Dúvidas
+        </a>
+    </div>
             
             <div class="social-share">
                 <p>Compartilhe este desafio:</p>
@@ -850,6 +565,7 @@
                         <li><a href="index.html#formato">Formato</a></li>
                         <li><a href="index.html#premiacao">Premiação</a></li>
                         <li><a href="index.html#inscricao">Inscrição</a></li>
+                        <li><a href="regulamento.html">Regulamento</a></li>
                     </ul>
                 </div>
                 
@@ -943,6 +659,11 @@
 </body>
 
 </html>
+
+
+
+
+
 
 
 
