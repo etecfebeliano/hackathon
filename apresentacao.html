@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Amanhã das Cidades - Hackathon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Open Sans', sans-serif;
+            height: 100%;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .active-slide {
+            display: block;
+        }
+
+        .hero {
+            background-color: #00aaff;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #f7d00c;
+            padding: 15px 30px;
+            text-decoration: none;
+            color: black;
+            border-radius: 8px;
+        }
+
+        .slide h2 {
+            margin: 20px 0;
+            font-size: 28px;
+        }
+
+        .section-content {
+            padding: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .footer p {
+            font-size: 16px;
+        }
+
+        .prev, .next {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+        }
+
+        .prev { left: 20px; }
+        .next { right: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Hero Section -->
+    <div class="slide hero active-slide">
+        <h1>O Amanhã das Cidades</h1>
+        <h2>Desafios e Soluções para o Século XXII</h2>
+        <p>Imagine uma cidade no ano de 2100. Como será viver nela? Que problemas enfrentaremos? E, mais importante: como podemos começar a resolvê-los agora?</p>
+        <a href="#inscricao" class="cta-button">Inscreva-se Agora</a>
+    </div>
+
+    <!-- Slide 2: Sobre o Evento -->
+    <div class="slide">
+        <h2>Sobre o Hackathon</h2>
+        <div class="section-content">
+            <p>O hackathon "O Amanhã das Cidades" convida você a explorar as transformações que os centros urbanos enfrentarão até o século XXII. A missão é clara: propor soluções criativas, viáveis e impactantes para construir cidades mais humanas, inteligentes, sustentáveis e inclusivas.</p>
+            <p>Este é um desafio para pessoas apaixonadas por inovação, tecnologia, urbanismo, sustentabilidade e impacto social. É uma oportunidade para você sair do presente e projetar o futuro.</p>
+        </div>
+    </div>
+
+    <!-- Slide 3: Temas e Desafios -->
+    <div class="slide">
+        <h2>Temas e Desafios</h2>
+        <p>Escolha um dos eixos temáticos abaixo como base para sua solução:</p>
+        <div class="section-content">
+            <p><strong>1. Mudanças Climáticas</strong>: Como tornar as cidades resilientes aos eventos climáticos extremos?</p>
+            <p><strong>2. População Envelhecida</strong>: Como adaptar as cidades a uma população cada vez mais idosa?</p>
+            <p><strong>3. Mobilidade Urbana</strong>: Como mover milhões de pessoas de forma eficiente, limpa e acessível?</p>
+            <p><strong>4. Sustentabilidade e Consumo Responsável</strong>: Como reduzir o impacto ambiental das cidades?</p>
+            <p><strong>5. Desigualdade e Inclusão Social</strong>: Como garantir que o futuro urbano seja para todos?</p>
+        </div>
+    </div>
+
+    <!-- Slide 4: Formato do Hackathon -->
+    <div class="slide">
+        <h2>Formato do Hackathon</h2>
+        <div class="section-content">
+            <p>12 horas de imersão total com equipes de 8 a 10 participantes. O objetivo é entregar uma solução inovadora com a orientação de mentores especializados.</p>
+        </div>
+    </div>
+
+    <!-- Slide 5: Premiação -->
+    <div class="slide">
+        <h2>Premiação</h2>
+        <div class="section-content">
+            <p>As melhores propostas receberão prêmios em diferentes categorias como "Solução Mais Inovadora", "Maior Potencial de Impacto" e "Melhor Pitch".</p>
+        </div>
+    </div>
+
+    <!-- Slide 6: Inscrição -->
+    <div class="slide">
+        <h2>Participe do Hackathon</h2>
+        <div class="section-content">
+            <p>Estudantes, profissionais, empreendedores, pesquisadores e todos que desejam transformar o futuro urbano são bem-vindos. Inscreva-se agora!</p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8txKvI2c54nkpuOc7a-6E4qRqz-Dl7jGagqMT5r_C90OK0Q/viewform?embedded=true" width="100%" height="600" style="border-radius: 8px;"></iframe>
+        </div>
+    </div>
+
+    <!-- Slide 7: Contato -->
+    <div class="slide footer">
+        <h3>Contato</h3>
+        <p>Email: contato@amanhadasciudades.com</p>
+        <p>Telefone: (11) 99999-9999</p>
+    </div>
+
+    <!-- Navegação entre os slides -->
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active-slide');
+            currentSlide += direction;
+
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+
+            slides[currentSlide].classList.add('active-slide');
+        }
+    </script>
+</body>
+</html>
