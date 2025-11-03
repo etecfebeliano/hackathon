@@ -377,125 +377,67 @@
 
     <!-- Materiais de Apoio -->
     <section class="section materiais-section">
-        <div class="container">
-            <h2 class="section-title">Materiais de Apoio</h2>
-            <p class="section-subtitle">Recursos selecionados para inspirar e fundamentar sua solução</p>
-            
-            <div class="categorias-tabs">
-                <button class="tab active" data-categoria="artigos">Artigos Técnicos</button>
-                <button class="tab" data-categoria="noticias">Notícias</button>
-                <button class="tab" data-categoria="ferramentas">Ferramentas</button>
-                <button class="tab" data-categoria="cases">Cases de Sucesso</button>
-                <button class="tab" data-categoria="todos">Ver Todos</button>
+    <div class="container">
+        <h2 class="section-title">Materiais de Apoio - População Envelhecida</h2>
+        <p class="section-subtitle">Recursos selecionados para inspirar e fundamentar sua solução</p>
+        
+        <div class="categorias-tabs">
+            <button class="tab active" data-categoria="artigos">Artigos Técnicos</button>
+            <button class="tab" data-categoria="ferramentas">Ferramentas</button>
+            <button class="tab" data-categoria="cases">Cases de Sucesso</button>
+            <button class="tab" data-categoria="todos">Ver Todos</button>
+        </div>
+        
+        <div class="materiais-grid" id="materiais-container">
+            <!-- Artigos Técnicos -->
+            <div class="material-card visible" data-categoria="artigos">
+                <div class="material-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="material-content">
+                    <h3>Envelhecimento Populacional no Brasil</h3>
+                    <p>Análise demográfica e projeções sobre o envelhecimento da população brasileira.</p>
+                    <a href="https://www.ibge.gov.br/estatisticas/sociais/populacao/25870-envelhecimento.html" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
+                </div>
             </div>
             
-            <div class="materiais-grid" id="materiais-container">
-                <!-- Artigos Técnicos -->
-                <div class="material-card visible" data-categoria="artigos">
-                    <div class="material-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Resiliência Urbana às Mudanças Climáticas</h3>
-                        <p>Documento técnico da ONU sobre estratégias de adaptação climática para cidades.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+            <div class="material-card visible" data-categoria="artigos">
+                <div class="material-icon">
+                    <i class="fas fa-user-md"></i>
                 </div>
-                
-                <div class="material-card visible" data-categoria="artigos">
-                    <div class="material-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Planejamento de Infraestrutura Verde</h3>
-                        <p>Guia completo para integração de soluções baseadas na natureza no ambiente urbano.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+                <div class="material-content">
+                    <h3>Políticas para População Idosa</h3>
+                    <p>Diretrizes e estratégias para o cuidado integral da população envelhecida.</p>
+                    <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-da-pessoa-idosa" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                
-                <div class="material-card visible" data-categoria="artigos">
-                    <div class="material-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Dados Climáticos para Cidades</h3>
-                        <p>Análise de séries históricas e projeções climáticas para planejamento urbano.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+            </div>
+
+            <!-- Ferramentas -->
+            <div class="material-card visible" data-categoria="ferramentas">
+                <div class="material-icon">
+                    <i class="fas fa-tools"></i>
                 </div>
-                
-                <!-- Notícias -->
-                <div class="material-card hidden" data-categoria="noticias">
-                    <div class="material-icon">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Cidades Pioneiras em Resiliência Climática</h3>
-                        <p>Reportagem sobre as estratégias adotadas por cidades ao redor do mundo.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+                <div class="material-content">
+                    <h3>Plataforma de Cuidado ao Idoso</h3>
+                    <p>Ferramentas digitais para monitoramento e cuidado da população idosa.</p>
+                    <a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/pessoa-idosa" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                
-                <div class="material-card hidden" data-categoria="noticias">
-                    <div class="material-icon">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Impacto Econômico das Mudanças Climáticas</h3>
-                        <p>Análise dos custos associados à inação frente aos eventos climáticos extremos.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+            </div>
+
+            <!-- Cases de Sucesso -->
+            <div class="material-card visible" data-categoria="cases">
+                <div class="material-icon">
+                    <i class="fas fa-star"></i>
                 </div>
-                
-                <!-- Ferramentas -->
-                <div class="material-card hidden" data-categoria="ferramentas">
-                    <div class="material-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Simulador de Impacto Climático</h3>
-                        <p>Ferramenta interativa para visualizar efeitos de diferentes cenários climáticos.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                
-                <div class="material-card hidden" data-categoria="ferramentas">
-                    <div class="material-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Banco de Dados de Soluções Urbanas</h3>
-                        <p>Repositório de iniciativas bem-sucedidas de adaptação climática em cidades.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Cases -->
-                <div class="material-card hidden" data-categoria="cases">
-                    <div class="material-icon">
-                        <i class="fas fa-city"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Roterdã: Modelo de Cidade Esponja</h3>
-                        <p>Case da cidade holandesa que transformou sua relação com a água.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                
-                <div class="material-card hidden" data-categoria="cases">
-                    <div class="material-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <div class="material-content">
-                        <h3>Cingapura: Jardim na Cidade</h3>
-                        <p>Como Cingapura integrou natureza e infraestrutura urbana para mitigar ilhas de calor.</p>
-                        <a href="#" class="material-link" target="_blank">Acessar recurso <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+                <div class="material-content">
+                    <h3>Programa Vila Vertical</h3>
+                    <p>Case de sucesso em adaptação de moradias para população idosa em São Paulo.</p>
+                    <a href="https://prefeitura.sp.gov.br/w/noticia/vila-dos-idosos-completa-dez-anos-e-ganha-premio-de-locacao-social"></i></a>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Call-to-Action -->
     <section class="section cta-section">
         <div class="container">
@@ -639,6 +581,7 @@
 </body>
 
 </html>
+
 
 
 
